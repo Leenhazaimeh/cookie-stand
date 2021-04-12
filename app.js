@@ -2,7 +2,7 @@
 
 const Seattle = {
     hours: ['6am', '7pm', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
-
+location : 'seatele',
     cookiesNum: [],
     min: 23,
     max: 65,
@@ -75,7 +75,7 @@ Seattle.creatsalmoncookies();
 
 const Tokyo = {
     hours: ['6am', '7pm', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
-
+    location :'tokyo',
     cookiesNum: [],
     min: 3,
     max: 24,
@@ -150,7 +150,7 @@ Tokyo.creatsalmoncookies();
 
 const Dubai= {
     hours: ['6am', '7pm', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
-
+    location :'dubai',
     cookiesNum: [],
     min:11,
     max: 38,
@@ -224,7 +224,7 @@ Dubai.creatsalmoncookies();
 
 const Paris= {
     hours: ['6am', '7pm', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
-
+    location :'paris',
     cookiesNum: [],
     min:20,
     max: 38,
@@ -298,7 +298,7 @@ Paris.creatsalmoncookies();
 
 const Lima= {
     hours: ['6am', '7pm', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
-
+    location :'lima',
     cookiesNum: [],
     min:2,
     max: 16,
