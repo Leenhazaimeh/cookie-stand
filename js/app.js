@@ -58,7 +58,7 @@ store.prototype.simulatedamounts = function(){
     
 store.prototype.CookiesSum = function(){
   for(let j=0; j < this.cookiesNum.length; j++){
-    this.totCookies += this.cookiesNum[j]};
+    this.totCookies= this.cookiesNum[j]};
   
 };
 
@@ -75,7 +75,7 @@ store.prototype.render = function(){
     td2= document.createElement('td');
     td2.textContent = this.cookiesNum[i];
     tr2.appendChild(td2);
-    subtotal +=this.cookiesNum[i];
+    subtotal =this.cookiesNum[i];
   }
 
   let td6= document.createElement('td');
@@ -95,7 +95,7 @@ let Lima = new store('Lima',2,16,4.6);
 
 
 for(let i=0; i<  salmon.length; i++){
-    salmon[i].themainhours(6,14);
+    salmon[i].themainhours(0,14);
     salmon[i].getRandCust();
     salmon[i].simulatedamounts();
     salmon[i].CookiesSum();
@@ -137,18 +137,18 @@ function addfooter(){
   td3.textContent = 'Totals';
   tr3.appendChild(td3);
 
-  let td4 = null;
+  let td4 = 0;
   let sum = 0;
   let total = 0;
   for(let i=0; i<salmon[0].thehours.length; i++){
     sum = 0;
     td4 = document.createElement('td');
     for(let j=0; j<salmon.length; j++){
-      sum += salmon[j].cookiesNum[i];
+      sum = salmon[j].cookiesNum[i];
       td4.textContent = sum;
       tr3.appendChild(td4);
     }
-    total += sum;
+    total = sum;
   }
   let td5 = document.createElement('td');
   td5.textContent = total;
