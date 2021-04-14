@@ -12,7 +12,7 @@ function getRandomIntInclusive(min, max) {
 let parent = document.getElementById('container');
 let table = document.createElement('table');
 var rowCount = table.rows.length;
-let newStore = [];
+
 parent.appendChild(table);
 
 let Salmon = [];
@@ -78,7 +78,7 @@ Store.prototype.render = function(){
     tr2.appendChild(td2);
     subTotal =subTotal + this.cookiesNum[i];
   }
-console.log(subTotal);
+
   let td6= document.createElement('td');
   td6.textContent = subTotal;
   tr2.appendChild(td6);
@@ -168,21 +168,24 @@ const form = document.getElementById('former');
         function storCreator(event) {
             event.preventDefault();
             console.log(event);
-            let storName = event.target.name.value;
-            if (newStore.indexOf(storName)){
-              let min =parseInt(event.target.m.value);
-            let max = parseInt(event.target.mx.value);        
-            let avgCookie = parseFloat(event.target.avg.value);
+            let StoreName =event.target.Sname.value;
+            let MIN =parseInt(event.target.m.value);
+            let MAX  = parseInt(event.target.mx.value);        
+            let AVG = parseFloat(event.target.avg.value);
+            let newStore = new Locations(StoreName,Min,Max,Avg); 
+            newStore.theMainHours(6,14);
+            newStore.simulatedAmounts();
+            newStore.cookiesSum();
+      
 
-            }else{
-            let min =parseInt(event.target.m.value);
-            let max = parseInt(event.target.mx.value);        
-            let avg = parseFloat(event.target.avg.value);
+
             table.deleteRow(rowCount -1);
-            let newRow = new Store(storName, min, max, avg);
+            newStore.render(); 
+            let newRow = new Store(storName, MIN,MAX, AVG);
             console.log (newRow);
-        
-          }
             addFooter();
+        
+          };
+            
 
-          }
+          
