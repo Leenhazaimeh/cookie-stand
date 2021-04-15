@@ -11,7 +11,7 @@ function getRandomIntInclusive(min, max) {
 
 let parent = document.getElementById('container');
 let table = document.createElement('table');
-var rowCount = table.rows.length;
+let rowCount = table.rows.length;
 
 parent.appendChild(table);
 
@@ -167,25 +167,20 @@ const form = document.getElementById('former');
 
         function storCreator(event) {
             event.preventDefault();
-            console.log(event);
-            let StoreName =event.target.Sname.value;
-            let MIN =parseInt(event.target.m.value);
-            let MAX  = parseInt(event.target.mx.value);        
-            let AVG = parseFloat(event.target.avg.value);
-            let newStore = new Locations(StoreName,Min,Max,Avg); 
+            console.log(event.target);
+            let storName =event.target.Sname.value;
+            let Min =parseInt(event.target.m.value);
+            let Max  = parseInt(event.target.mx.value);        
+            let Avg = parseFloat(event.target.avg.value);
+            let newStore = new Store( storName, Min,Max,Avg); 
+            table.deleteRow(rowCount -1);
             newStore.theMainHours(6,14);
             newStore.simulatedAmounts();
             newStore.cookiesSum();
-      
-
-
-            table.deleteRow(rowCount -1);
-            newStore.render(); 
-            let newRow = new Store(storName, MIN,MAX, AVG);
             console.log (newRow);
             addFooter();
         
           };
             
-
+          
           
