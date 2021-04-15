@@ -171,13 +171,16 @@ const form = document.getElementById('former');
             let storName =event.target.Sname.value;
             let Min =parseInt(event.target.m.value);
             let Max  = parseInt(event.target.mx.value);        
-            let Avg = parseFloat(event.target.avg.value);
+            let Avg = parseFloat(event.target.Savg.value);
             let newStore = new Store( storName, Min,Max,Avg); 
             table.deleteRow(rowCount -1);
             newStore.theMainHours(6,14);
+            newStore.getRandCust();
             newStore.simulatedAmounts();
             newStore.cookiesSum();
-            console.log (newRow);
+            newStore.render();
+            
+            console.log(Salmon);
             addFooter();
         
           };
