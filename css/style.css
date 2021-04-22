@@ -27,6 +27,9 @@ header{
 hr {
     background-image: url("https://media.istockphoto.com/vectors/chocolate-chip-cokies-pattern-design-bake-pattern-design-vector-id1203233907?k=6&m=1203233907&s=612x612&w=0&h=NIl0Jtptsu_UrAa9IBJhYtGApz_H5ZyrnxDNleIrGTk=");
 height: 20%;
+border-style: inset;
+border-width: 1px;
+
     
 }
 table{
